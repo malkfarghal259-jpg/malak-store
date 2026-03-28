@@ -148,8 +148,7 @@ const colorSelected = selectedOptions?.find((option: any) => option.name === 'Co
       <div className="w-full lg:w-[55%]">
         <div className="relative">
           <GalleryImages images={galleryImages} gridType="grid5" />
-          <LikeButton className="absolute top-3 left-3" />
-        </div>
+          <LikeButton productId={product.id} className="absolute top-3 left-3" />        </div>
       </div>
     )
   }
