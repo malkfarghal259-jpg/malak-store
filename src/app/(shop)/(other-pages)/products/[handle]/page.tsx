@@ -44,9 +44,8 @@ export default async function Page({ params }: { params: Promise<{ handle: strin
 
   const { title, status, featuredImage, rating, reviewNumber, options, price, selectedOptions, images, breadcrumbs } =
     product
-  const sizeSelected = selectedOptions?.find((option) => option.name === 'Size')?.value || ''
-  const colorSelected = selectedOptions?.find((option) => option.name === 'Color')?.value || ''
-
+ const sizeSelected = selectedOptions?.find((option: any) => option.name === 'Size')?.value || ''
+const colorSelected = selectedOptions?.find((option: any) => option.name === 'Color')?.value || ''
   const renderRightSide = () => {
     return (
       <div className="w-full pt-10 lg:w-[45%] lg:pt-0 lg:pl-7 xl:pl-9 2xl:pl-10">
